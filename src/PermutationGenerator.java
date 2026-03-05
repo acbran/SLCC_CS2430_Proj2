@@ -7,7 +7,9 @@ public class PermutationGenerator {
 
 	public static void main(String[] args) {
 		ArrayList<int[]> perms = permutationGenerator(3);
-		System.out.println(perms);
+		int permCount = 0;
+		for (int[] p : perms) permCount++;
+		System.out.println("permutations: " + permCount);
 		for (int[] p : perms) {
 			System.out.println(Arrays.toString(p));
 		}
@@ -58,3 +60,4 @@ public class PermutationGenerator {
 		}
 			
 }
+
