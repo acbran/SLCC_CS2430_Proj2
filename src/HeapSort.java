@@ -15,7 +15,7 @@ public class HeapSort {
      * @param items     The items to sort.
      * @return          The number of comparisons from both heapify and sorting.
      */
-    public static int sort(int[] items) {
+    public static long sort(int[] items) {
         return heapify(items) + heapSort(items);
     }
 
@@ -25,9 +25,9 @@ public class HeapSort {
      * @param items     The array to heapify.
      * @return          number of comparisons.
      */
-    public static int heapify(int[] items) {
+    public static long heapify(int[] items) {
         int length = items.length;
-        int comparisons = 0;
+        long comparisons = 0;
 
         for (int i = length / 2 - 1; i >= 0; i--) {
 
@@ -69,8 +69,8 @@ public class HeapSort {
      * @param items     Heapified array to order.
      * @return          Number of comparisons.
      */
-    public static int heapSort(int[] items) {
-        int comparisons = 0;
+    public static long heapSort(int[] items) {
+        long comparisons = 0;
 
         for (int i = items.length - 1; i > 0; i--) {
             int temp = items[0];

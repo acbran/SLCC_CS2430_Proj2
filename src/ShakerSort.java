@@ -14,8 +14,8 @@ public class ShakerSort {
      * 
      * @param items the amount of comparisons in the array.
      */
-    public static int sort(int[] items) {
-        int comparisons = 0;
+    public static long sort(int[] items) {
+        long comparisons = 0;
         int startIndex = 0, endIndex = items.length - 1;
         while (startIndex < endIndex) {
             for (int i = startIndex; i < endIndex; i++) {
