@@ -3,7 +3,7 @@ package algorithmPerformance;
  * Team Name: Team 2
  * Members: Alexander Branch Julian Cloward Logan Chess
  * Course: CS 2430, section 502
- * Project: Programming Project 1 - Spring 2026
+ * Project: Programming Project 2 - Spring 2026
  * 
  * Heapify and sorts a list of integers while keeping track
  * and returning the number of comparisons.
