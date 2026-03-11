@@ -3,6 +3,16 @@ package algorithmPerformance;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Team Name: Team 2
+ * Members: Alexander Branch Julian Cloward Logan Chess
+ * Course: CS 2430, section 502
+ * Project: Programming Project 2 - Spring 2026
+ * 
+ * Test class runs 4 sorting algorithms on permutations of integer arrays for a small number n and outputs the 
+ * count of comparisons each algorithm required to sort a given array.
+ */
+
 public class TestDriver {
 
 	public static void main(String[] args) {
@@ -43,4 +53,5 @@ public class TestDriver {
 		
 	}
 }
+
 
