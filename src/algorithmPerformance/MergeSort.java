@@ -3,7 +3,7 @@ package algorithmPerformance;
  * Team Name: Team 2
  * Members: Alexander Branch Julian Cloward Logan Chess
  * Course: CS 2430, section 502
- * Project: Programming Project 1 - Spring 2026
+ * Project: Programming Project 2 - Spring 2026
  *
  * Implements the mergesort algorithm with element-to-element comparison counting.
  * The merge step is where all element-to-element comparisons occur.
