@@ -53,6 +53,21 @@ public class PermutationGenerator {
 		}
 
 		
+	    /** 
+	     * This method computes n! iteratively.
+	     * This is to verify accuracy of 
+	     * the permutationGenerator() method. 
+	     * 
+	     * @param n	the number to start at / to factorial
+	     */
+	    public static int factorial(int n) {
+	        int result = 1;
+	        for (int i = 2; i <= n; i++) {
+	            result *= i;
+	        }
+	        return result;
+	    }
+	    
 		private static void swap(int[] array, int x, int y) {
 			int temp = array[x];
 			array[x] = array[y];
