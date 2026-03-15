@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Comparator;
 
 /**
  * Team Name: Team 2
@@ -25,6 +26,10 @@ public class TestDriver {
 //		sortingAlgorithmTest(6);
 		Map<Algorithm, List<SortResult>> results = sortPermutedArrays(3);	
 		outputSortResults(results);
+		
+		experimentalRun(4);
+		experimentalRun(6);
+		experimentalRun(8);
 
 	}
 
@@ -64,12 +69,14 @@ public class TestDriver {
 		
 	}
 	
-	/** Calls the permutation generator and the sorting methods, stores the
-	* sorting results in List<SortResult>, and returns a map of the 
-	* algorithm names from the Algorithm Enum with the respective list.
-	* @param i is an integer of the number of digits in the array to be permuted
-	* @return Map<Algorithm, List<SortResult>>
-	* */
+	/**
+	 * This method calls the permutation generator and the sorting methods and 
+	 * stores the sorting results in List<SortResult>, and then returns a map of 
+	 * the algorithm names from the Algorithm Enum with the respective list.
+	 * 
+	 * @param i is an integer of the number of digits in the array to be permuted
+	 * @return Map<Algorithm, List<SortResult>>
+	 */
 	private static Map<Algorithm, List<SortResult>> sortPermutedArrays(int i) {
 		//Map Algorithms from the algorithm enum to a list of SortResult objects that hold algorithm sorting data
 		Map<Algorithm, List<SortResult>> results = new EnumMap<>(Algorithm.class);
@@ -116,6 +123,63 @@ public class TestDriver {
 		            System.out.println();
 		        });
 		}
+	}
+	
+	/**
+	 * Runs the full Part 4 experiment for a given n and does the following:
+	 * (1) generates all permutations,
+	 * (2) sorts with all four algorithms, and then 
+	 * (3) outputs best 10, worst 10, and average comparisons to console.
+	 * 
+	 * @param n the size of the array to permute
+	 */
+	private static void experimentalRun(int n) {
+		Map<Algorithm, List<SortResult>> results = sortPermutedArrays(n);
+		int permCount = PermutationGenerator.factorial(n);
+ 
+		System.out.println("=== n = " + n + " (" + permCount + " permutations) ===\n");
+ 
+		for (Algorithm alg : Algorithm.values()) {
+			// Sort results by comparison count ascending (best first)
+			List<SortResult> sorted = results.get(alg).stream()
+				.sorted(Comparator.comparingLong(SortResult::comparisons))
+				.toList();
+ 
+			List<SortResult> best10 = sorted.stream().limit(10).toList();
+			List<SortResult> worst10 = sorted.reversed().stream().limit(10).toList();
+			double average = sorted.stream()
+				.mapToLong(SortResult::comparisons)
+				.average()
+				.orElse(0.0);
+ 
+			printAlgorithmSummary(alg, best10, worst10, average);
+		}
+	}
+	
+	/**
+	 * This method prints the best 10, worst 10, and average comparisons for 
+	 * a single algorithm in tab-separated format.
+	 * 
+	 * @param alg		the algorithm
+	 * @param best10	the 10 permutations with fewest comparisons
+	 * @param worst10	the 10 permutations with most comparisons
+	 * @param average	the mean comparisons across all permutations
+	 */
+	private static void printAlgorithmSummary(Algorithm alg, List<SortResult> best10,
+			List<SortResult> worst10, double average) {
+		System.out.println("--- " + alg + " Best 10 ---");
+		System.out.println("Original Array\tComparisons");
+		for (SortResult r : best10) {
+			System.out.println(Arrays.toString(r.originalArray()) + "\t" + r.comparisons());
+		}
+
+		System.out.println("--- " + alg + " Worst 10 ---");
+		System.out.println("Original Array\tComparisons");
+		for (SortResult r : worst10) {
+			System.out.println(Arrays.toString(r.originalArray()) + "\t" + r.comparisons());
+		}
+
+		System.out.printf("--- %s Average: %.2f ---%n%n", alg, average);
 	}
 }
 
