@@ -24,8 +24,9 @@ public class PermutationGenerator {
 	 * @return List<int[]>
 	 */
 		public static ArrayList<int[]> permutationGenerator(int k) {
+			if (k <= 0) throw new IllegalArgumentException("Integer provided must be positive.");
+			
 			ArrayList<int[]> result = new ArrayList<int[]>();
-			if (k == 0) return result;
 			int[] baseArray = new int[k];
 			int[] counter = new int[k];
 			for (int i = 0; i < k; i++) {
