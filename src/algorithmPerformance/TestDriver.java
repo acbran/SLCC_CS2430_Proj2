@@ -21,12 +21,20 @@ public class TestDriver {
 
 	public static void main(String[] args) {
 
+		//permutation generator test
+		ArrayList<int[]> perms = PermutationGenerator.permutationGenerator(4);
+		System.out.println(PermutationGenerator.toString(perms));
+
+		//sorting algorithms one-by-one comparison
 		sortingAlgorithmTest(3);
 //		sortingAlgorithmTest(4);
 //		sortingAlgorithmTest(6);
+
+		//verify algorithms storing correct number of results
 		Map<Algorithm, List<SortResult>> results = sortPermutedArrays(3);	
 		outputSortResults(results);
-		
+
+		//experimental runs for data analysis
 		experimentalRun(4);
 		experimentalRun(6);
 		experimentalRun(8);
