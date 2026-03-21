@@ -85,14 +85,14 @@ public class HeapSort {
                 int right = 2 * current + 2;
                 int largest = current;
 
+                comparisons++;
                 if (left < i) {
-                    comparisons++;
                     if (items[left] > items[largest])
                         largest = left;
                 }
 
+                comparisons++;
                 if (right < i) {
-                    comparisons++;
                     if (items[right] > items[largest])
                         largest = right;
                 }
