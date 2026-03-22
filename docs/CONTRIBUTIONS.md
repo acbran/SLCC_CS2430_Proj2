@@ -66,18 +66,19 @@ Owned ...
 ---
 
 ### Alex Branch — Implementation Lead
-Owned implementation of ....
+Owned overall branch health, implementation of permutation generator, initial implementation of test driver, and several sections in the final report and video.
 
 **Contributions:**
-- Project manager - set meeting cadence, led meetings, managed project plan
-- Comms lead - created and managed GitHub repository, assembled report, wrote README, packaged and submitted final deliverables
-- Multiset Operations - wrote multiset operations implementation code
-- Report writer - wrote report sections for multiset operations, discussion questions 5-6, and conclusion
-- Code management - merged 2 packages into single package for streamlined program export
+- Implementation Lead: managed main branch health, ensured overall code structure could be easily imported into an IDE, compiled, and run without issues
+- Project setup: Wrote scoping document for project
+- Code contributions: Wrote the code for permutation generator, set up the overall structure for the program by writing the `SortResult` class and the inital implementation of `TestDriver`
+- Final report: Wrote the introduction, algorithm summaries, and methods
+- Final video: recorded sections for permutation generator and comparison counters
 
 **Evidence Pointers:**
-- Multiset operations - commit 21-Feb 567d048
-- Initial report assembly - Commit 22-Feb 6a9dbd9
-- Report writing - Commit 01-Mar c8f8449
-- Code management - Commit 01-Mar 1bc77fe
-- Project management - Commit 22-Feb 1d4a985
+- project scoping document: Commit 3/9 - abe5089
+- refactor project into single package: commits 3/10 - 88c71e7, 532ac70, 2389570, cd8718b
+- permutation generator: Commit 3/10 - 88c71e7
+- permutation generator update (toString): commit 3/21 - 015013b
+- testDriver, sortResult: commit 3/11 - b5d5f4f 
+- report writing: commit 3/21 - 8dfb9ab
