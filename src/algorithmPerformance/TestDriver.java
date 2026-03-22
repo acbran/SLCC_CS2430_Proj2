@@ -109,8 +109,12 @@ public class TestDriver {
 	}
 	
 	/**
+	 * This method outputs sorting results for all algorithms to the console.
+	 * First, it prints the number of stored results per algorithm as a sanity check
+	 * Then, it prints the original array and comparison count for the first 3
+	 * results of each algorithm.
 	 * 
-	 * @param results
+	 * @param results	a map of each Algorithm to its list of SortResult objects
 	 */
 	private static void outputSortResults(Map<Algorithm, List<SortResult>> results) {
 		/* Output number of results stored for each Algorithm in the Map as a preliminary check that correct number
