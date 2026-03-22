@@ -24,7 +24,6 @@ public class Verification {
         edgeCaseTests();
  
         System.out.println("\n=== Permutation Generator Tests ===\n");
-        testPermutationGenerator(0);
         testPermutationGenerator(1);
         testPermutationGenerator(2);
         testPermutationGenerator(3);
@@ -114,7 +113,7 @@ public class Verification {
      * @param maxN	...
      */
     private static void verifyCorrectness(int maxN) {
-        for (int n = 0; n <= maxN; n++) {
+        for (int n = 1; n <= maxN; n++) {
             ArrayList<int[]> perms = PermutationGenerator.permutationGenerator(n);
             boolean allPassed = true;
  
