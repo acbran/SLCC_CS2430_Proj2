@@ -33,13 +33,13 @@ SLCC_CS2430_Proj2/
 	
 	docs/
 		CONTRIBUTIONS.md
-    Programming Project 2 Report.docx
-    Project 2 Plan.xlsn
-    Project 2 Scope.docx
-    README.md
-    Results & Questions.docx
-    SortDriver UML.png
-    screen recording title slide.pptx
+        Programming Project 2 Report.docx
+    	Project 2 Plan.xlsn
+		Project 2 Scope.docx
+    	README.md
+    	Results & Questions.docx
+    	SortDriver UML.png
+    	screen recording title slide.pptx
 
   .gitignore
   SLCC_CS2430_Proj2.jar
