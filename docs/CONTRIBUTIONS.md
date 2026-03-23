@@ -16,16 +16,15 @@
 ## Responsibilities & Evidence
 
 ### Logan Chess — Verification Lead
-Owned test plan, edge cases, and verification evidence.
+Owned specific algorithm implementation, test plan, edge cases, and verification evidence.
 
 
 **Contributions:**
-- Defined the universal set structure within the `SetOperationsDemo.java`
-- Designed and implemented `Student.java` — the implementation of the Student data unit.
-- Designed and implemented `BitStringSet.java` — boolean[] bit-string representation of ordinary sets
-- Implemented all ordinary set operations: complement, union, intersection, difference, symmetric difference
-- Authored Introduction section of the team report
-- Authored Discussion questions 1–4 of the team report
+- Designed and implemented the Part 4 section within Programming Requirements within `TestDriver.java`.
+- Designed and implemented `Verification.java` - the edge case testing and unit testing.
+- Implemented Quicksort and Mergesort algorithms with explicit counter for comparisons.
+- Authored Verification Approach section of the team report
+- Authored Discussion questions 3–4 of the team report
 
 **Evidence Pointers:**
 - `MergeSort.java`
@@ -36,9 +35,9 @@ Owned test plan, edge cases, and verification evidence.
     - Commit `20c2f439db54f202c5fe416ec6a81eb660482410`
 - UML Diagram of Source Code:
     - Commit `2dd15485a663fdb1b02cc97b493bfc713222e6cb`
-- Report sections: Introduction, Discussion §1–4
-    - Commit `TBD`
-    - Commit `TBD`
+- Report sections: Verification and Results, Discussion §3–4
+    - Commit `e498ba675921640d726b4f4e3584dc916b78c91a`
+    - Commit `e498ba675921640d726b4f4e3584dc916b78c91a`
 
 ---
 
