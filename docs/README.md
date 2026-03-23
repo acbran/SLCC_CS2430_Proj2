@@ -6,7 +6,7 @@ Members: Alexander Branch, Julian Cloward, Logan Chess
 
 Course: Salt Lake Community College, CS 2430, Section 502
 
-Project: Programming Project 1: Set and Multiset Operations
+Project: Programming Project 2: Sorting Algorithms, Efficency, and Performance
 
 Spring 2026
 
