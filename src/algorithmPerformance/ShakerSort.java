@@ -20,21 +20,21 @@ public class ShakerSort {
         int startIndex = 0, endIndex = items.length - 1;
         while (startIndex < endIndex) {
             for (int i = startIndex; i < endIndex; i++) {
+                comparisons++;
                 if (items[i] > items[i+1]) {
                     int temp = items[i+1];
                     items[i+1] = items[i];
                     items[i] = temp;
                 }
-                comparisons++;
             }
             endIndex--;
             for (int i = endIndex; i > startIndex; i--) {
+                comparisons++;
                 if (items[i] < items[i-1]) {
                     int temp = items[i-1];
                     items[i-1] = items[i];
                     items[i] = temp;
                 }
-                comparisons++;
             }
             startIndex++;
         }
